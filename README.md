@@ -27,7 +27,9 @@ git clone https://github.com/Rachell-Tann/Snake-Game/tree/main/Images
 ## Contact
 
 Name: Rachel Tan
+
 Email: Yingshantan@live.com
+
 Project Link: https://github.com/Rachell-Tann/Snake-Game
 
 ## Acknowledgments
