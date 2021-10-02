@@ -21,8 +21,8 @@ git clone https://github.com/Rachell-Tann/Snake-Game/tree/main/Images
 
 ### Executing program
 
-1. Clone the source code
-2. Clone and import the images
+1. Import all three of the java file
+2. Import all three of the png images
 
 ## Contact
 
