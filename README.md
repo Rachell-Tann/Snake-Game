@@ -4,7 +4,7 @@ Snake Game
 
 ## Description
 
-The objective is to eat as many apples as possible. Each time the snake eats an apple its body grows. There will be a time limit of 5 minutes per game. The snake must avoid the walls and its own body in order to continue the game. If the game is finished, the "Game Over" message is displayed in the middle of the board.
+The objective of this game is to eat as many apples as possible. Each time the snake eats an apple its body grows. There will be a time limit of 5 minutes per game. The snake must avoid the walls and its own body in order to continue the game. If the game is finished, the "Game Over" message is displayed in the middle of the board.
 
 ## Getting Started
 
