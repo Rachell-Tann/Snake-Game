@@ -10,7 +10,7 @@ The objective is to eat as many apples as possible. Each time the snake eats an 
 
 ### Dependencies
 
-* N/A
+N/A
 
 ### Installing
 
