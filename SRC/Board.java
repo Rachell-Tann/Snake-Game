@@ -17,15 +17,17 @@ import javax.swing.Timer;
 public class Board extends JPanel implements ActionListener {
 
 	// Variables
-	private final int B_WIDTH = 300;
-	private final int B_HEIGHT = 300;
-	private final int DOT_SIZE = 10;
-	private final int ALL_DOTS = 900;
-	private final int RAND_POS = 29;
-	private final int SPEED = 100;
+	private final int B_WIDTH = 300; // Determine width of the board
+	private final int B_HEIGHT = 300; // Determine height of the board
+	private final int DOT_SIZE = 10; // Determine size of the apple and the dot of the snake
+	private final int ALL_DOTS = 900; // Define the maximum number of possible dots on the board (900 =
+										// (300*300)/(10*10))
+	private final int RAND_POS = 29; // Calculate a random position for an apple
+	private final int SPEED = 100; // Determine the speed of the snake
 	private final int SECOND = 1000; // 1000ms = 1s
 	private final long TIME_LIMIT = 300000; // 300000ms = 5min
 
+	// Arrays to store the x and y coordinates of all joints of a snake
 	private final int x[] = new int[ALL_DOTS];
 	private final int y[] = new int[ALL_DOTS];
 
@@ -68,7 +70,7 @@ public class Board extends JPanel implements ActionListener {
 		initGame();
 	}
 
-	// Import images
+	// Import images and the ImageIcon class is used for displaying PNG images
 	private void loadImages() {
 
 		ImageIcon iid = new ImageIcon("dot.png");
@@ -81,7 +83,7 @@ public class Board extends JPanel implements ActionListener {
 		head = iih.getImage();
 	}
 
-	// Dot setup
+	// create the snake, randomly locate an apple on the board, and start the timer
 	private void initGame() {
 
 		dots = 3;
@@ -169,7 +171,7 @@ public class Board extends JPanel implements ActionListener {
 		}
 	}
 
-	// Se direction
+	// Control direction
 	private void move() {
 
 		for (int z = dots; z > 0; z--) {
@@ -195,9 +197,10 @@ public class Board extends JPanel implements ActionListener {
 
 	}
 
-	// Set coordination
+	// Determine if the snake has hit itself or one of the walls
 	private void checkCollision() {
 
+		// If the snake hits one of its joints with its head the game is over
 		for (int z = dots; z > 0; z--) {
 
 			if ((z > 4) && (x[0] == x[z]) && (y[0] == y[z])) {
@@ -205,6 +208,7 @@ public class Board extends JPanel implements ActionListener {
 			}
 		}
 
+		// The game is finished if the snake hits the bottom of the board
 		if (y[0] >= B_HEIGHT) {
 			inGame = false;
 		}
@@ -226,7 +230,6 @@ public class Board extends JPanel implements ActionListener {
 		}
 	}
 
-	// Locate apples
 	private void locateApple() {
 
 		int r = (int) (Math.random() * RAND_POS);
