@@ -16,9 +16,11 @@ The objective is to eat as many apples as possible. Each time the snake eats an 
 
 1. Clone the source code
 	git clone https://github.com/Rachell-Tann/Snake-Game/tree/main/SRC
+	```
 
 2. Clone the images
 	git clone https://github.com/Rachell-Tann/Snake-Game/tree/main/Images
+	```
 
 ### Executing program
 
